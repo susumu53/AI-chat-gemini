@@ -1,0 +1,7 @@
+gemini-stream-chat/
+├─ api/
+│  └─ chat.js          # サーバーレス関数（Geminiへ接続＆SSEで返す）
+├─ index.html          # チャットUI（フロント）
+├─ app.js              # フロント用JS（ストリーム受信して描画）
+├─ style.css           # 文字大きめ・高齢者向けの見た目
+└─ package.json        # 依存ライブラリ定義（Vercelが自動インストール）
