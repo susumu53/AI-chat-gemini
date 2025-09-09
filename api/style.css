@@ -1,0 +1,70 @@
+:root {
+  --bg: #f7f7f7;
+  --panel: #ffffff;
+  --text: #222;
+  --bot: #0a7f49;
+  --user: #1b5ec8;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  font-size: 18px; /* 大きめ */
+  line-height: 1.8;
+}
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+}
+h1 { font-size: 28px; margin: 8px 0 16px; }
+
+.chat {
+  background: var(--panel);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 12px;
+  height: 60vh;
+  overflow-y: auto;
+}
+
+.msg { margin: 8px 0; }
+.msg .name { display: inline-block; font-weight: 700; }
+.msg.bot .name { color: var(--bot); }
+.msg.user .name { color: var(--user); }
+.msg .bubble {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: inline-block;
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.form {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  gap: 8px;
+}
+input[type="text"] {
+  font-size: 18px;
+  padding: 10px 12px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+}
+button {
+  font-size: 18px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--user);
+  color: #fff;
+  cursor: pointer;
+}
+button:disabled { opacity: .6; cursor: not-allowed; }
